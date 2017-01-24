@@ -1,0 +1,91 @@
+#!/bin/bash
+
+# requires ./solr and WiseOwl.conf to execute
+# WiseOwl : starts a solr instance configured to act as question answering system with default core WiseOwl and default port 8983
+#  
+. ./WiseOwl.conf
+
+[ "$todo" = "-v" -o "$todo" = "--version" ]
+if [ $? -ne 0 ];then
+shift
+fi
+
+eval set -- "$ARGS"
+
+while true; do
+   case $1 in
+      	-h|--help)
+        usage
+        exit 0
+        ;;
+      	-v|--version)
+        echo "The Current Version Of WiseOwl : $PROGVERSION"
+	exit 0
+        ;;
+      	-a|--all)
+	flag=1       
+	;;
+      	-c)
+	shift;
+	cd ../server/solr
+	[ -d "$1" ]
+	if [ "$?" -eq "0" ];then
+	core=$1
+	else
+	echo -e "\nWrong Core entered . Using default core :  WiseOwl\n"
+	fi
+	cd ../../bin
+	;;
+	-p)
+	shift
+	if [ $1 -gt -1 -a $1 -lt 10000 ] ;then 
+	port=$1 
+	else
+	echo "Port No. should lie in range [0,9999]";exit
+	fi
+	;;
+      	--)
+        shift
+        break
+        ;;
+      	*)
+        shift
+        exit 0
+        ;;
+   	esac
+   	shift
+done
+
+# expects symlinks to opennlp-models and WordNet-3.0
+
+if [ "$todo" = "start" ];then
+./solr start -p $port -s ../server/solr -a "-Xmx1024M $DEBUG_OPTS -Dmodel.dir=../opennlp-models -Dsolr.data.dir=solr/WiseOwl/data -Dwordnet.dir=../WordNet-3.0/dict/" 
+elif [ "$todo" = "stop" -a $flag -eq 0 ];then 
+./solr stop -p $port
+elif [ "$todo" = "stop" -a $flag -eq 1 ];then 
+./solr stop -all
+elif [ "$todo" = "status" ];then
+./solr status
+elif [ "$todo" = "index" ];then 
+
+for jar in ../dist/*.jar;do
+   export CLASSPATH=$CLASSPATH:$jar
+done
+for jar in ../dist/solrj-lib/*.jar;do
+   export CLASSPATH=$CLASSPATH:$jar
+done
+for jar in ../dist/stanford-corenlp-full-2015-12-09/*.jar;do
+   export CLASSPATH=$CLASSPATH:$jar
+done
+export MEM_ARGS="-Xms1.5g -Xmx2g"
+RUN_CMD="java -cp $CLASSPATH:../target/WiseOwl-0.0.1-SNAPSHOT.jar com.wiseowl.WiseOwl.indexing.FeedData $2 $3 $4"
+echo "Starting to index Files in $3 folder "
+exec $RUN_CMD
+elif [ "$todo" = "train" ];then
+java -Dmodel.dir="../opennlp-models" -Dwordnet.dir="../WordNet-3.0/dict" \
+-cp ../target/WiseOwl-0.0.1-SNAPSHOT.jar com.wiseowl.WiseOwl.query.AnswerTypeClassifier \
+../data/questions-train.txt ../opennlp-models/qa/ans.bin
+else
+usage
+fi
+  
