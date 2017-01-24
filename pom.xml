@@ -1,0 +1,142 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>2.4.3</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <minimizeJar>true</minimizeJar>
+     
+		    <filters>
+		        <filter>
+		            <artifact>*:*</artifact>
+		            <excludes>
+		                <exclude>META-INF/*.SF</exclude>
+		                <exclude>META-INF/*.DSA</exclude>
+		                <exclude>META-INF/*.RSA</exclude>
+		            </excludes>
+		        </filter>
+		    </filters>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+ 
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.wiseowl</groupId>
+  <artifactId>WiseOwl</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+
+  <name>WiseOwl</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+ 
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+	<!-- https://mvnrepository.com/artifact/net.sf.jwordnet/jwnl -->
+	<dependency>
+	    <groupId>net.sf.jwordnet</groupId>
+	    <artifactId>jwnl</artifactId>
+	    <version>1.4_rc3</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+	<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>1.7.21</version>
+		</dependency>
+		 <!-- https://mvnrepository.com/artifact/org.apache.opennlp/opennlp-tools -->
+		<dependency>
+		    <groupId>org.apache.opennlp</groupId>
+		    <artifactId>opennlp-tools</artifactId>
+		    <version>1.5.3</version>
+		</dependency>
+		  <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-simple</artifactId>
+		    <version>1.7.21</version>
+		</dependency>
+		<!-- for wikipedia cleanup -->
+		<dependency>
+		      <groupId>org.apache.commons</groupId>
+		      <artifactId>commons-lang3</artifactId>
+		      <version>3.5</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.opennlp/opennlp-maxent -->
+		<dependency>
+		    <groupId>org.apache.opennlp</groupId>
+		    <artifactId>opennlp-maxent</artifactId>
+		    <version>3.0.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.opennlp/opennlp-uima -->
+		<dependency>
+		    <groupId>org.apache.opennlp</groupId>
+		    <artifactId>opennlp-uima</artifactId>
+		    <version>1.6.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.solr/solr-analysis-extras -->
+		<dependency>
+    		<groupId>org.apache.solr</groupId>
+   			<artifactId>solr-analysis-extras</artifactId>
+    		<version>6.3.0</version>
+		</dependency>
+			<dependency>
+	    <groupId>org.apache.solr</groupId>
+	    <artifactId>solr-solrj</artifactId>
+	    <version>6.3.0</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-hdfs -->
+		<dependency>
+		    <groupId>org.apache.hadoop</groupId>
+		    <artifactId>hadoop-hdfs</artifactId>
+		    <version>2.7.1</version>
+		</dependency>
+	
+  <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-core -->
+<dependency>
+    <groupId>org.apache.lucene</groupId>
+    <artifactId>lucene-core</artifactId>
+    <version>6.2.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-benchmark -->
+<!--  for indexing wikipedia -->
+<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-benchmark -->
+<dependency>
+    <groupId>org.apache.lucene</groupId>
+    <artifactId>lucene-benchmark</artifactId>
+    <version>6.3.0</version>
+</dependency>
+
+
+  <!-- https://mvnrepository.com/artifact/org.apache.solr/solr-core -->
+<dependency>
+    <groupId>org.apache.solr</groupId>
+    <artifactId>solr-core</artifactId>
+    <version>6.3.0</version>
+</dependency>
+  
+  </dependencies>
+</project>

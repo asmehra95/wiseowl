@@ -1,0 +1,13 @@
+Snapshot 0.0.1 size: 24.1 Mb
+Features :
+1) Indexing
+2) Tokenization Using OpenNlp
+3) Name and Entity Recognition
+
+To Install:
+1) Place WiseOwl in bin directory, Make Sure it is latest one
+2) Delete managed-schema file in server/solr/WiseOwl/conf directory
+3) Copy schema.xml and solrconfig.xml(Replace previous file) to server/solr/WiseOwl/conf
+4) Copy WiseOwl-0.0.1-SNAPSHOT to target/ folder 
+5) start the server using the WiseOwl Script
+
