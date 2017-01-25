@@ -1,0 +1,57 @@
+#set($searcher=$request.searcher)
+#set($params=$request.params)
+#set($clusters = $response.response.clusters)
+ 
+<div class="form">
+  	<form id="query-form" action="#{url_for_home}" method="GET">
+	<h1>WiseOwl</h1>
+      	<input type="search" class="search_bar" placeholder="Please Ask a Question Here......"
+	id="q" name="q" value="$!esc.html($params.get('q'))">
+   	<input type="hidden" name="defType" value="OwlQuery"/>
+    	<input type="hidden" name="WiseOwl" value="true"/>
+   	 <input type="hidden" name="Owl.qf" value="content"/>
+    	#if($request.params.get('debugQuery'))
+      	<input type="hidden" name="debugQuery" value="true"/>
+    	#end
+    	#foreach($fq in $request.params.getParams('fq'))
+      	<input type="hidden" name="fq" value="$esc.html($fq)"/>
+    	#end
+    	<div class="constraints">
+      	#foreach($fq in $params.getParams('fq'))
+        #set($previous_fq_count=$velocityCount - 1)
+      	&gt; <a style="{text-decoration: line-through;}" href="#url_for_filters($request.params.getParams('fq').subList(0,$previous_fq_count))">$fq</a>
+      	#end
+    	</div>
+     	#if($request.params.get('debugQuery'))
+        <a href="#" onclick='jQuery(this).siblings("pre").toggle(); return false;'>toggle parsed query</a>
+        <pre style="display:none">$response.response.debug.parsedquery</pre>
+      	#end    
+  	</form>
+</div>
+#if($response.response.spellcheck.suggestions and $response.response.spellcheck.suggestions.size() > 0)
+Did you mean <a href="#url_for_home?q=$esc.url($response.response.spellcheck.suggestions.collation)#if($list.size($request.params.getParams('fq')) > 0)&#fqs($request.params.getParams('fq'))#end#debug">$response.response.spellcheck.suggestions.collation</a>?
+#end
+<br>
+</br>
+#if ($response.response.qaResponse)
+	<h2>Answers</h2>    
+<ul>
+    #foreach($answer in $response.response.qaResponse)
+    <li><div id="box" class="box effect5">
+      <div class="hit"><span>Answer</span>: $answer.value.window</div>
+      ##TODO: could hook in highlighting
+    </div></li>
+    #end
+</ul>
+#end
+</br>
+#if ($response.response.qaResponse || $page.current_page_number>1)
+   <h2>Supporting Documents</h2>
+<ul>
+	#foreach($doc in $response.results)
+	<li><div id="box" class="box effect1">
+    	#parse("hit.vm")
+	</div></li>
+ 	#end
+</ul> 
+#end

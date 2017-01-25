@@ -1,0 +1,8 @@
+<div class="footer">
+</br>
+ #if ($response.response.qaResponse || $page.current_page_number>1)
+	$page.results_found results found in ${response.responseHeader.QTime} ms
+  	#link_to_previous_page("Prev    ") Page $page.current_page_number Of $page.page_count #link_to_next_page("    Next")
+#end
+  <br/>
+</div>

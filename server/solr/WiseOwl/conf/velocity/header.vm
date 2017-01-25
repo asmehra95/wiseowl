@@ -1,0 +1,7 @@
+## empty header, customize as desired
+<div class="header">
+  <ul class="user clearfix">
+    <li><a href="#"><i class="fa fa-user"></i>Advanced</a></li>
+    <li><a href="#"><i class="fa fa-cog"></i>About Us</a></li>
+  </ul>
+</div>
