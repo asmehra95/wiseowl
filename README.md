@@ -70,7 +70,7 @@ To build the source, in WiseOwl_HOME:
  
 ![Start Screen](screenshots/start_screen.png)
 
-## Speacial Thanks:
+## Special Thanks:
 
 We are greatly thankful to Grant Ingersoll for their open source project under the book TamingText
 Their work is really great! We have built on their code. We thank them so much. It was great help and learning experience for us.
