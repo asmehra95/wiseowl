@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/ejml-0.23.jar" />
+    <libelement value="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/ejml-0.23-src.zip" />
+    <libelement value="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/javax.json.jar" />
+    <libelement value="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/javax.json-api-1.0-sources.jar" />
+    <libelement value="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/joda-time.jar" />
+    <libelement value="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/joda-time-2.9-sources.jar" />
+    <libelement value="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/jollyday.jar" />
+    <libelement value="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/jollyday-0.4.7-sources.jar" />
+    <libelement value="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/protobuf.jar" />
+    <libelement value="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/slf4j-api.jar" />
+    <libelement value="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/slf4j-simple.jar" />
+    <libelement value="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/stanford-corenlp-3.6.0.jar" />
+    <libelement value="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/stanford-corenlp-3.6.0-javadoc.jar" />
+    <libelement value="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/stanford-corenlp-3.6.0-models.jar" />
+    <libelement value="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/stanford-corenlp-3.6.0-sources.jar" />
+    <libelement value="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/xom.jar" />
+    <libelement value="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/xom-1.2.10-src.jar" />
+    <conelement value="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/src/main/java" expected_position="0" />
+      <src_folder value="file://$MODULE_DIR$/src/test/java" expected_position="1" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="jdk" jdkName="J2SE-1.5" jdkType="JavaSDK" />
+    <orderEntry type="library" name="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER" level="application" />
+    <orderEntry type="module-library">
+      <library name="ejml-0.23.jar">
+        <CLASSES>
+          <root url="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/ejml-0.23.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="ejml-0.23-src.zip">
+        <CLASSES>
+          <root url="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/ejml-0.23-src.zip" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="javax.json.jar">
+        <CLASSES>
+          <root url="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/javax.json.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="javax.json-api-1.0-sources.jar">
+        <CLASSES>
+          <root url="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/javax.json-api-1.0-sources.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="joda-time.jar">
+        <CLASSES>
+          <root url="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/joda-time.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="joda-time-2.9-sources.jar">
+        <CLASSES>
+          <root url="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/joda-time-2.9-sources.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jollyday.jar">
+        <CLASSES>
+          <root url="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/jollyday.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jollyday-0.4.7-sources.jar">
+        <CLASSES>
+          <root url="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/jollyday-0.4.7-sources.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="protobuf.jar">
+        <CLASSES>
+          <root url="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/protobuf.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="slf4j-api.jar">
+        <CLASSES>
+          <root url="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/slf4j-api.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="slf4j-simple.jar">
+        <CLASSES>
+          <root url="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/slf4j-simple.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="stanford-corenlp-3.6.0.jar">
+        <CLASSES>
+          <root url="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/stanford-corenlp-3.6.0.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="stanford-corenlp-3.6.0-javadoc.jar">
+        <CLASSES>
+          <root url="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/stanford-corenlp-3.6.0-javadoc.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="stanford-corenlp-3.6.0-models.jar">
+        <CLASSES>
+          <root url="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/stanford-corenlp-3.6.0-models.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="stanford-corenlp-3.6.0-sources.jar">
+        <CLASSES>
+          <root url="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/stanford-corenlp-3.6.0-sources.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="xom.jar">
+        <CLASSES>
+          <root url="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/xom.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="xom-1.2.10-src.jar">
+        <CLASSES>
+          <root url="file:///media/avtar/softy/NLP/java project/WiseOwl/dist/stanford-corenlp-full-2015-12-09/xom-1.2.10-src.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>
