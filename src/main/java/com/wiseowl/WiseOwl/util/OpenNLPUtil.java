@@ -15,9 +15,6 @@
  * -------------------
  * To purchase or learn more about Taming Text, by Grant Ingersoll, Thomas Morton and Drew Farris, visit
  * http://www.manning.com/ingersoll
-* -----------------------------------------------------------
- * This code has been modified and upgraded by WiseOwl Team, Avtar Singh, Sumit Kumar and Yuvraj Singh.
- *  Modifications are copyright 2016-2017 WiseOwl Team, Avtar Singh and Sumit Kumar
  */
 
 package com.wiseowl.WiseOwl.util;
