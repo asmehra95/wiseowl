@@ -44,6 +44,7 @@ started, you will need:
 5. Download Apache Solr 6.3.0 available at
    http://lucene.apache.org/solr/
    copy contrib, server and dist folder from Solr 6.3.0 package to WiseOwl_HOME root directory
+6. Download stanford coreNLP from their official website. https://stanfordnlp.github.io/CoreNLP/download.html and include it on your build path or you can add maven dependencies(not recommended for unstable internet connections because file is quite big)
 
 ## Building the Source
 ----------------------------------------------
